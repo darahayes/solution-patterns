@@ -562,7 +562,7 @@
           "name": "postgresql-persistent",
           "displayName": "postgresql-persistent",
           "annotations": {
-            "openshift.io/display-name": "RHMI Lab Order Management UI",
+            "openshift.io/display-name": "RHMI Lab Order Management DB",
             "description": "The database for the order API"
           }
         },
