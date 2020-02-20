@@ -2,7 +2,7 @@
 :sso-version: 7.3
 
 // URLs
-:openshift-console-url: {openshift-host}
+:openshift-console-url: {openshift-host}/dashboards
 :sso-adapter-docs-url: https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{sso-version}/html/securing_applications_and_services_guide/index
 :sso-realm-url: {user-sso-url}/auth/admin/solution-patterns/console/index.html
 
@@ -26,7 +26,7 @@
 = {title}
 
 // word count that fits best is 15-22, with 20 really being the sweet spot. Character count for that space would be 100-125
-Learn how to set up {customer-sso-name} to protect end-user applications by using standards such as OpenID Connect, OAuth 2.0, and SAML 2.0.
+Learn how to set up {user-rhsso-name} to protect end-user applications by using standards such as OpenID Connect, OAuth 2.0, and SAML 2.0.
 
 IMPORTANT: You must complete the *{sp1-title}* Solution Pattern before starting this one.
 
