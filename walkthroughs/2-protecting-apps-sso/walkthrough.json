@@ -2,6 +2,7 @@
   "dependencies": {
     "repos": [],
     "serviceInstances": [],
+    "managedServices": [],
     "templates": [
       {
         "apiVersion": "template.openshift.io/v1",
