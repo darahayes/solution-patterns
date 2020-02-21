@@ -1,7 +1,83 @@
 {
-    "dependencies": {
-      "repos": [],
-      "serviceInstances": []
-    }
+  "dependencies": {
+    "repos": [],
+    "serviceInstances": [],
+    "templates": [
+      {
+        "apiVersion": "template.openshift.io/v1",
+        "kind": "Template",
+        "metadata": {
+          "name": "realm-container",
+          "namespace": "redhat-rhmi-user-sso",
+          "displayName": "n.a.",
+          "annotations": {
+            "openshift.io/display-name": "n.a.",
+            "description": "n.a.",
+            "iconClass": "icon-nodejs",
+            "tags": "rhmi,nodejs"
+          }
+        },
+        "objects": [
+          {
+            "apiVersion": "keycloak.org/v1alpha1",
+            "kind": "KeycloakRealm",
+            "metadata": {
+              "name": "solution-patterns",
+              "labels": {
+                "app": "sso"
+              }
+            },
+            "spec": {
+              "realm": {
+                "id": "solution-patterns",
+                "realm": "solution-patterns",
+                "enabled": true,
+                "displayName": "Solution Patterns",
+                "eventsListeners": [],
+                "users": [
+                  {
+                    "username": "developer",
+                    "firstName": "Developer",
+                    "lastName": "Doe",
+                    "email": "developer@example.com",
+                    "enabled": true,
+                    "emailVerified": true,
+                    "realmRoles": [
+                      "admin",
+                      "offline_access",
+                      "uma_authorization"
+                    ],
+                    "clientRoles": {
+                      "account": [
+                        "manage-account",
+                        "view-profile"
+                      ],
+                      "realm-management": [
+                        "create-client",
+                        "impersonation",
+                        "manage-authorization",
+                        "manage-clients",
+                        "manage-events",
+                        "manage-identity-providers",
+                        "manage-realm",
+                        "manage-users",
+                        "realm-admin"
+                      ]
+                    }
+                  }
+                ]
+              },
+              "instanceSelector": {
+                "matchLabels": {
+                  "sso": "master"
+                }
+              }
+            }
+          }
+        ],
+        "parameters": []
+      }
+    ]
   }
+}
   
