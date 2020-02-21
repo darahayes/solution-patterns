@@ -9,7 +9,6 @@
         "kind": "Template",
         "metadata": {
           "name": "realm-container",
-          "namespace": "redhat-rhmi-user-sso",
           "displayName": "n.a.",
           "annotations": {
             "openshift.io/display-name": "n.a.",
@@ -24,6 +23,7 @@
             "kind": "KeycloakRealm",
             "metadata": {
               "name": "solution-patterns",
+              "namespace": "redhat-rhmi-user-sso",
               "labels": {
                 "app": "sso"
               }
